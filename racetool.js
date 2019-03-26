@@ -18,7 +18,7 @@ function stat(strg) {
       return `${h.toString().padStart(2,0)}|${m.toString().padStart(2,0)}|${s.toString().padStart(2,0)}`;
     }
     
-    let timesArr = strg.replace(/[|]/g, '').match(/\d{3,6}/g);
+    let timesArr = strg.replace(/[|]/g, '').match(/\d{3,6}/g); //replace [|] with whatver divides your times in string
     
     for (x = 0; x < timesArr.length; x++) {
       if (timesArr[x].length < 5){timesArr[x] += '0';}
