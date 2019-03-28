@@ -3,7 +3,7 @@ function stat(strg) {
     
     var final = []
     
-    function convertSecs(time) {
+    function convertSecs(time) { //convert input to seconds for easy math
       let l = time.length;
       let hours = l > 5 ? parseInt(time[l-6] + time[l-5]) * 3600 : parseInt(time[l-5]) * 3600;
       let mins = parseInt(time[l-4] + time[l-3]) * 60;
@@ -14,7 +14,7 @@ function stat(strg) {
       let h = Math.trunc(seconds/3600);
       let m = Math.floor((seconds - h * 3600) / 60);
       let s = (seconds - h * 3600 - m * 60);
-    
+    //returns answers back to more readable format
       return `${h.toString().padStart(2,0)}|${m.toString().padStart(2,0)}|${s.toString().padStart(2,0)}`;
     }
     
