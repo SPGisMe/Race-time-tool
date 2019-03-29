@@ -32,5 +32,5 @@ function stat(strg) {
     let median = final.length % 2 ? final[Math.floor(final.length / 2)]
       : Math.floor((final[final.length / 2] + final[(final.length / 2) - 1]) / 2);
     
-    return `Range: ${unconvert(range)} Average: ${unconvert(average)} Median: ${unconvert(median)}`;
+    return `Range: ${unconvert(range)}, Average: ${unconvert(average)}, Median: ${unconvert(median)}`;
 }
