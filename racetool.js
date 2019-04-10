@@ -21,7 +21,7 @@ function stat(strg) {
     let timesArr = strg.replace(/[|]/g, '').match(/\d{3,6}/g); //replace [|] with whatver divides your times in string
     
     for (x = 0; x < timesArr.length; x++) {
-      if (timesArr[x].length < 5){timesArr[x] += '0';}
+      if (timesArr[x].length < 5){timesArr[x] += '0';} //formats time for convertSecs function
       
       final.push(convertSecs(timesArr[x]));
     }
