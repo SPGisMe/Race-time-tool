@@ -21,11 +21,11 @@ function stat(strg) {
     let timesArr = strg.replace(/[|]/g, '').match(/\d{3,6}/g); //replace [|] with whatver divides your times in string
     
     for (x = 0; x < timesArr.length; x++) {
-      if (timesArr[x].length < 5){timesArr[x] += '0';} //formats time for convertSecs function
+      if (timesArr[x].length < 5){timesArr[x] += '0';} //formats time for convertSecs function if only single digits are input
       
       final.push(convertSecs(timesArr[x]));
     }
-    final.sort((a,b) => a-b);
+    final.sort((a,b) => a-b); //sorts times in order for median calculation
     
     let range = final[final.length - 1] - final[0];
     let average = Math.floor(final.reduce((a,b) => a + b) / final.length);
